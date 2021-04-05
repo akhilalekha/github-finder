@@ -5,7 +5,9 @@ export default class Navbar extends Component {
 	render() {
 		return (
 			<nav>
-				<h1>Navbar</h1>
+				<h1>
+					<i className="fab fa-github"></i>GitHub Finder
+				</h1>
 			</nav>
 		);
 	}
