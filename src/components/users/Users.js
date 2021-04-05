@@ -26,6 +26,12 @@ export default class Users extends Component {
 		]
 	};
 	render() {
-		return <div></div>;
+		return (
+			<div>
+				{this.state.users.map(user => (
+					<div key={user.id}>{user.login}</div>
+				))}
+			</div>
+		);
 	}
 }
