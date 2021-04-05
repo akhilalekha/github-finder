@@ -1,0 +1,10 @@
+.useritem {
+	min-height: 10rem;
+	width: 25rem;
+}
+
+.profile-img {
+	border-radius: 50%;
+	height: 6rem;
+	width: 6rem;
+}
