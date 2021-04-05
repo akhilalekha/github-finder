@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import UserItem from "./UserItem";
+import "./Users.css";
 
 export default class Users extends Component {
 	state = {
@@ -28,7 +29,7 @@ export default class Users extends Component {
 	};
 	render() {
 		return (
-			<div>
+			<div className="users">
 				{this.state.users.map(user => (
 					<UserItem key={user.id} user={user} />
 				))}

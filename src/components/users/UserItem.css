@@ -1,11 +1,12 @@
 .useritem {
 	min-height: 10rem;
-	width: 25rem;
+	width: 20rem;
 	border: 2px dashed gray;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	/* flex-wrap: wrap; */
 	margin: 1rem;
 	padding: 1rem;
 }
