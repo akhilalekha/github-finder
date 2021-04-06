@@ -1,6 +1,8 @@
 nav {
 	background-color: blue;
 	color: white;
+	display: flex;
+	justify-content: space-between;
 }
 
 h1 {
@@ -10,4 +12,17 @@ h1 {
 
 h1 svg {
 	padding: 0 10px;
+}
+
+.nav-links {
+	display: flex;
+	list-style: none;
+}
+
+.nav-links a {
+	text-decoration: none;
+	padding: 0 2rem;
+	color: white;
+	font-weight: 500;
+	font-size: 1.2rem;
 }
