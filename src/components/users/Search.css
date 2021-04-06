@@ -1,0 +1,23 @@
+.search {
+	margin: 2rem 5rem;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+}
+
+.search-inp,
+.search-btn {
+	height: 2rem;
+	outline: none;
+	margin: 10px;
+	font-size: 1rem;
+}
+
+.search-btn {
+	border: none;
+	background-color: rgb(27, 26, 26);
+	color: white;
+	border-radius: 5px;
+}
