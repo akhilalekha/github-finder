@@ -1,0 +1,8 @@
+.alert-text {
+	background-color: rgb(197, 194, 194);
+	padding: 10px;
+}
+
+.alert-text svg {
+	padding: 0 10px;
+}
