@@ -1,5 +1,7 @@
 .search {
 	margin: 2rem 5rem;
+	display: flex;
+	flex-direction: column;
 }
 
 .form {
@@ -20,4 +22,13 @@
 	background-color: rgb(27, 26, 26);
 	color: white;
 	border-radius: 5px;
+}
+
+.clear-btn {
+	height: 2rem;
+	outline: none;
+	font-size: 1rem;
+	margin: 10px;
+	border-radius: 5px;
+	border: none;
 }
