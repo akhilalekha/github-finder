@@ -11,7 +11,7 @@ export class Search extends Component {
 		searchUsers: PropTypes.func.isRequired,
 		clearUsers: PropTypes.func.isRequired,
 		showClear: PropTypes.bool.isRequired,
-		setAlert: PropTypes.string.isRequired
+		setAlert: PropTypes.func.isRequired
 	};
 
 	onChange = e => this.setState({ [e.target.name]: e.target.value });
