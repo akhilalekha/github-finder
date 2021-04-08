@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 export class User extends Component {
 	componentDidMount() {
+		// console.log("inside component mount");
 		this.props.getUser(this.props.match.params.login);
 	}
 
@@ -27,9 +28,13 @@ export class User extends Component {
 			following,
 			public_repos,
 			public_gists,
-			hireable
+			hireable,
+			company
 		} = this.props.user;
+		// console.log("props inside user details is", this.props);
 		const { loading } = this.props;
+		// console.log("inside user details: user", this.props.user);
+		// console.log("inside user details: hireable", hireable);
 		if (loading) return <Spinner />;
 		return (
 			<div className="user-details">
@@ -38,9 +43,13 @@ export class User extends Component {
 				</Link>
 				Hireable:{" "}
 				{hireable ? (
-					<i className="fas fa-check green"></i>
+					<span key="green">
+						<i className="fas fa-check green"></i>
+					</span>
 				) : (
-					<i className="fas fa-times-circle red"></i>
+					<span key="red">
+						<i className="fas fa-times-circle red"></i>
+					</span>
 				)}
 				<div className="card">
 					<div>
@@ -59,6 +68,38 @@ export class User extends Component {
 					<a href={html_url} className="github_url">
 						Visit GitHub Profile
 					</a>
+					<ul>
+						<li>
+							{login && (
+								<Fragment>
+									<strong>Username: </strong>
+									{login}
+								</Fragment>
+							)}
+						</li>
+						<li>
+							{company && (
+								<Fragment>
+									<strong>Company: </strong>
+									{company}
+								</Fragment>
+							)}
+						</li>
+						<li>
+							{blog && (
+								<Fragment>
+									<strong>Website: </strong>
+									{blog}
+								</Fragment>
+							)}
+						</li>
+					</ul>
+					<div className="labels">
+						<div className="badge">Followers: {followers}</div>
+						<div className="badge">Following: {following}</div>
+						<div className="badge">Public Repos: {public_repos}</div>
+						<div className="badge">Public Gists: {public_gists}</div>
+					</div>
 				</div>
 			</div>
 		);

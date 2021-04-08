@@ -1,7 +1,5 @@
 .user-details {
-	/* height: 5rem; */
 	margin: 2rem;
-	/* border: 2px dashed gray; */
 }
 .back-btn {
 	height: 1.5rem;
@@ -47,4 +45,26 @@
 	text-decoration: none;
 	padding: 0.5rem;
 	text-align: center;
+}
+
+li {
+	list-style: none;
+	padding: 10px;
+}
+
+.labels {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.badge {
+	margin: 10px;
+	background-color: blue;
+	color: white;
+	height: 1.5rem;
+	width: 8rem;
+	text-align: center;
+	padding: 10px 0;
+	border-radius: 10px;
 }
