@@ -2,20 +2,25 @@ import React, { Component, Fragment } from "react";
 import "./User.css";
 import PropTypes from "prop-types";
 import Spinner from "../layout/Spinner";
+import Repos from "../repos/Repos";
 import { Link } from "react-router-dom";
 
 export class User extends Component {
 	componentDidMount() {
 		// console.log("inside component mount");
 		this.props.getUser(this.props.match.params.login);
+		this.props.getUserRepos(this.props.match.params.login);
 	}
 
 	static propTypes = {
 		loading: PropTypes.bool,
 		user: PropTypes.object.isRequired,
-		getUser: PropTypes.func.isRequired
+		repos: PropTypes.array.isRequired,
+		getUser: PropTypes.func.isRequired,
+		getUserRepos: PropTypes.func.isRequired
 	};
 	render() {
+		// console.log("inside user", this.props.user);
 		const {
 			name,
 			avatar_url,
@@ -31,10 +36,7 @@ export class User extends Component {
 			hireable,
 			company
 		} = this.props.user;
-		// console.log("props inside user details is", this.props);
-		const { loading } = this.props;
-		// console.log("inside user details: user", this.props.user);
-		// console.log("inside user details: hireable", hireable);
+		const { loading, repos } = this.props;
 		if (loading) return <Spinner />;
 		return (
 			<div className="user-details">
@@ -101,6 +103,7 @@ export class User extends Component {
 						<div className="badge">Public Gists: {public_gists}</div>
 					</div>
 				</div>
+				<Repos repos={repos} />
 			</div>
 		);
 	}
