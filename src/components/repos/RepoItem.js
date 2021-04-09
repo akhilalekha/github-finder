@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./RepoItem.css";
 
 const RepoItem = ({ repo }) => {
-	// console.log(repo);
 	return (
-		<div className="card">
+		<div className="repo-list">
 			<h3>
 				<a href={repo.html_url}>{repo.name}</a>
 			</h3>
