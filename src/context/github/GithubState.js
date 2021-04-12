@@ -20,8 +20,6 @@ const GithubState = props => {
 
 	const [state, dispatch] = useReducer(GithubReducer, initialState);
 
-	//search user
-
 	//search users
 	const searchUsers = async text => {
 		setLoading();
@@ -60,7 +58,6 @@ const GithubState = props => {
 			type: GET_REPOS,
 			payload: res.data
 		});
-		// setLoading(false);
 	};
 
 	//clear users from the state
