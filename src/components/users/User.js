@@ -7,7 +7,7 @@ import GithubContext from "../../context/github/githubContext";
 
 const User = ({ match }) => {
 	const githubContext = useContext(GithubContext);
-	const { getUser, loading, user, getUserRepos, repos } = githubContext;
+	const { user, repos, loading, getUser, getUserRepos } = githubContext;
 
 	useEffect(() => {
 		getUser(match.params.login);
@@ -17,6 +17,7 @@ const User = ({ match }) => {
 
 	const {
 		name,
+		company,
 		avatar_url,
 		location,
 		bio,
@@ -27,10 +28,11 @@ const User = ({ match }) => {
 		following,
 		public_repos,
 		public_gists,
-		hireable,
-		company
+		hireable
 	} = user;
+
 	if (loading) return <Spinner />;
+
 	return (
 		<div className="user-details">
 			<Link to="/" className="back-btn">
