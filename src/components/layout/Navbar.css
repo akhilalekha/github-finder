@@ -1,8 +1,13 @@
 nav {
 	background-color: blue;
-	color: white;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
 }
 
 h1 {
@@ -20,9 +25,7 @@ h1 svg {
 }
 
 .nav-links a {
-	text-decoration: none;
 	padding: 0 2rem;
-	color: white;
 	font-weight: 500;
 	font-size: 1.2rem;
 }

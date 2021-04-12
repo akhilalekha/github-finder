@@ -6,10 +6,13 @@ import "./Navbar.css";
 const Navbar = ({ icon, title }) => {
 	return (
 		<nav>
-			<h1>
-				<i className={icon}></i>
-				{title}
-			</h1>
+			<Link to="/">
+				<h1>
+					<i className={icon}></i>
+					{title}
+				</h1>
+			</Link>
+
 			<ul className="nav-links">
 				<li>
 					<Link to="/">Home</Link>
